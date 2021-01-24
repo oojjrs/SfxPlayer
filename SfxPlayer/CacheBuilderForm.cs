@@ -23,7 +23,7 @@ namespace SfxPlayer
         {
             var worker = sender as BackgroundWorker;
 
-            foreach (var path in Directory.EnumerateDirectories(_path, "*", SearchOption.AllDirectories))
+            foreach (var path in Directory.EnumerateFiles(_path, "*", SearchOption.AllDirectories))
             {
                 if (worker.CancellationPending)
                 {
